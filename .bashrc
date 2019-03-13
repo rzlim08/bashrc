@@ -143,3 +143,13 @@ alias ga='git add'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias lk='ls -lt | head'
+
+bash_prompt_command() {
+  if [ $? -eq 0 ]
+  then
+    echo $(history 1) >> ~/.bash_success
+  fi
+}
+
+PROMPT_COMMAND=bash_prompt_command
+
