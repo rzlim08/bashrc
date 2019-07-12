@@ -145,9 +145,10 @@ alias gcm='git commit -m'
 alias lk='ls -lt | head'
 
 bash_prompt_command() {
+  
   if [ $? -eq 0 ]
   then
-    echo $(history 1) >> ~/.bash_success
+    echo $(history 1)  >> ~/.bash_success
   fi
 }
 
@@ -160,3 +161,13 @@ export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\
 
 alias past='cat $HOME/.bash_success'
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias csvql='q -d, -HO' 
+alias ..="cd .."
+
+alias rocky="ssh -X rlim@rocky.rfmh.org"
+alias tank="ssh -X rlim@tank.rfmh.org"
+alias roxy="ssh -X rlim@roxy.rfmh.org"
+alias jubjub="ssh -X rlim@jubjub.rfmh.org"
+alias falcor="ssh -X rlim@falcor.rfmh.org"
+
+alias pyact="source venv/bin/activate"
